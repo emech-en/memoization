@@ -13,7 +13,8 @@ describe('memoization', function () {
 
         returnValue = 10;
 
-        // TODO currently fails, should work after implementing the memoize function
+        // TODO currently fails, should work after implementing the memoize function, it should also work with other
+        // types then strings, if there are limitations to which types are possible please state them
         expect(memoized('c544d3ae-a72d-4755-8ce5-d25db415b776')).to.equal(5);
     });
 
