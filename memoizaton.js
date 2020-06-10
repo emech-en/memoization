@@ -26,10 +26,23 @@
  * @param timeout   timeout for cached values in milliseconds
  */
 function memoize(func, resolver, timeout) {
-    // TODO implement the memoize function
-    return func;
+  // TODO: consider edge cases and validate params
+  
+  const cache = {};
+  return (...args) => {
+    const key = resolver(...args);
+
+    if (!cache[key] || Date.now() > cache[key].expiresAt) {
+      cache[key] = {
+        expiresAt: Date.now() + timeout,
+        value: func(...args),
+      };
+    }
+
+    return cache[key].value;
+  };
 }
 
 module.exports = {
-    memoize,
+  memoize,
 };
