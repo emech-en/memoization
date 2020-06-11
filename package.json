@@ -1,7 +1,10 @@
 {
   "name": "@emech/memoization",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "memoization.js",
   "repository": "https://github.com/emech-en/memoization",
   "author": "Emech En <mh.niroomand91@gmail.com>",
@@ -32,7 +35,10 @@
       ],
       "@semantic-release/git",
       "@semantic-release/github",
-      "@semantic-release/npm"
+      [
+        "@semantic-release/npm",
+        {}
+      ]
     ]
   }
 }
