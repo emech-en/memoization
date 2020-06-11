@@ -1,6 +1,6 @@
 {
   "name": "@emech/memoization",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": false,
   "main": "memoization.js",
   "repository": "https://github.com/emech-en/memoization",
