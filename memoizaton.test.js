@@ -1,14 +1,13 @@
 const memoization = require("./memoizaton");
-const expect = require("chai").expect;
 const sinon = require("sinon");
 // hint: use https://sinonjs.org/releases/v6.1.5/fake-timers/ for faking timeouts
 
-describe("memoization", function () {
+describe("memoization", () => {
   let clock;
-  before(() => {
+  beforeEach(() => {
     clock = sinon.useFakeTimers(Date.now());
   });
-  after(() => {
+  afterEach(() => {
     clock.uninstall();
   });
 
@@ -25,14 +24,14 @@ describe("memoization", function () {
 
     const firstResult = testMemoizedFunction(1, 11, 26);
     const secondResult = testMemoizedFunction(1, 11, 26);
-    expect(firstResult).to.equal(secondResult);
+    expect(firstResult).toBe(secondResult);
 
     clock.tick(500);
     const thirdResult = testMemoizedFunction(1, 11, 26);
-    expect(thirdResult).to.equal(secondResult);
+    expect(thirdResult).toBe(secondResult);
 
     clock.tick(1000);
     const forthResult = testMemoizedFunction(1, 11, 26);
-    expect(forthResult).not.to.equal(secondResult);
+    expect(forthResult).not.toBe(secondResult);
   });
 });
