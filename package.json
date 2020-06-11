@@ -1,5 +1,5 @@
 {
-  "name": "memoization",
+  "name": "@emech/memoization",
   "version": "0.0.0-development",
   "main": "index.js",
   "repository": "https://github.com/emech-en/memoization",
