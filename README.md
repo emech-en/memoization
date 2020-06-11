@@ -10,8 +10,8 @@ The purpose of this project is to demonstrate the followings:
 - Automatic Unit Tests and achieving 100% coverage.
 - Using CI/CD tools:
   - [Github Actions](https://github.com/features/actions) to automatically run tests and publish the npm package.
-- Using semantic-relase:
-  - [Semantic Release](https://github.com/semantic-release/semantic-release) to calculate new version number by processing commit messages.
+- Using Automatic Versioning:
+  - Use [Semantic Release](https://github.com/semantic-release/semantic-release) to calculate new version number by processing commit messages.
   - Publish the `next` branch to the `next` channel on npm and publish the `master` branch to the main channel.
 
 ## Instalation
