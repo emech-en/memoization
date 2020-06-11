@@ -1,7 +1,8 @@
 {
   "name": "@emech/memoization",
   "version": "0.0.0-development",
-  "main": "index.js",
+  "private": "false",
+  "main": "memoization.js",
   "repository": "https://github.com/emech-en/memoization",
   "author": "Emech En <mh.niroomand91@gmail.com>",
   "license": "MIT",
@@ -14,5 +15,21 @@
     "mocha": "^5.2.0",
     "sinon": "^6.1.5",
     "semantic-release": "^17.0.8"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/exec",
+        {
+          "prepareCmd": "npm version --no-git-tag-version ${nextRelease.version}"
+        }
+      ],
+      "@semantic-release/git",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
   }
 }
