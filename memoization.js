@@ -26,8 +26,21 @@
  * @param timeout   timeout for cached values in milliseconds
  */
 function memoize(func, resolver, timeout) {
-  // TODO: consider edge cases and validate params
-  
+  // Considering memoize(func, timout) { }
+  if (typeof resolver === "number") {
+    timeout = resolver;
+    resolver = (...args) => args[0];
+  }
+
+  // Check arguments types to be valid
+  if (
+    typeof func !== "function" ||
+    typeof resolver !== "function" ||
+    typeof timeout !== "number"
+  ) {
+    throw new Error("Argument Error: memoize(function, [function,] number)");
+  }
+
   const cache = {};
   return (...args) => {
     const key = resolver(...args);

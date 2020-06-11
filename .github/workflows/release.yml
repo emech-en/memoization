@@ -1,8 +1,5 @@
 name: Release
-on:
-  push:
-    branches:
-      - master
+on: push
 jobs:
   release:
     name: Release
@@ -16,9 +13,11 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: yarn install
+      - name: Run Tests
+        run: yarn test
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_USERNAME: ${{ secrets.NPM_USERNAME }}
-        run: npx semantic-release
+        run: yarn semantic-release
