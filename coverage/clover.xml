@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1591881271100" clover="3.2.0">
-  <project timestamp="1591881271100" name="All files">
-    <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2" elements="13" coveredelements="13" complexity="0" loc="7" ncloc="7" packages="1" files="1" classes="1"/>
+<coverage generated="1591906370518" clover="3.2.0">
+  <project timestamp="1591906370519" name="All files">
+    <metrics statements="12" coveredstatements="12" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3" elements="26" coveredelements="26" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
     <file name="memoizaton.js" path="/Users/emech/Projects/memoization/memoizaton.js">
-      <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
-      <line num="31" count="1" type="stmt"/>
-      <line num="32" count="1" type="stmt"/>
-      <line num="33" count="4" type="stmt"/>
-      <line num="35" count="4" type="cond" truecount="4" falsecount="0"/>
-      <line num="36" count="2" type="stmt"/>
-      <line num="42" count="4" type="stmt"/>
-      <line num="46" count="1" type="stmt"/>
+      <metrics statements="12" coveredstatements="12" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
+      <line num="30" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="6" type="stmt"/>
+      <line num="36" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="41" count="3" type="stmt"/>
+      <line num="44" count="4" type="stmt"/>
+      <line num="45" count="4" type="stmt"/>
+      <line num="46" count="14" type="stmt"/>
+      <line num="48" count="14" type="cond" truecount="4" falsecount="0"/>
+      <line num="49" count="9" type="stmt"/>
+      <line num="55" count="14" type="stmt"/>
+      <line num="59" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

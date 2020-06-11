@@ -6,6 +6,12 @@
     "access": "public"
   },
   "main": "memoization.js",
+  "files": [
+    "memoization.js",
+    "package.json",
+    "README.md",
+    "CHANGELOG.md"
+  ],
   "repository": "https://github.com/emech-en/memoization",
   "author": "Emech En <mh.niroomand91@gmail.com>",
   "license": "MIT",
