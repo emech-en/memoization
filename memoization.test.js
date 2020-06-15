@@ -100,4 +100,38 @@ describe("memoization", () => {
     const forthResult = testMemoizedFunction();
     expect(forthResult).not.toBe(secondResult);
   });
+
+  it("should cache async functions result", async () => {
+    clock.restore();
+
+    const asyncRandom = () => {
+      return new Promise((resolve) =>
+        setTimeout(() => resolve(Math.random()), 500)
+      );
+    };
+
+    const testMemoizedFunction = memoization.memoize(
+      asyncRandom,
+      () => null,
+      2000
+    );
+
+    let startTime = Date.now();
+    const firstResult = await testMemoizedFunction();
+    let duration = Date.now() - startTime;
+    expect(duration).toBeGreaterThanOrEqual(500);
+
+    startTime = Date.now();
+    const secondResult = await testMemoizedFunction();
+    duration = Date.now() - startTime;
+    expect(duration).toBeLessThan(500);
+    expect(firstResult).toBe(secondResult);
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    startTime = Date.now();
+    const thirdResult = await testMemoizedFunction();
+    duration = Date.now() - startTime;
+    expect(duration).toBeGreaterThanOrEqual(500);
+    expect(firstResult).not.toBe(thirdResult);
+  });
 });
