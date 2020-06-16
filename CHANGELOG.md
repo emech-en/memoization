@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/emech-en/memoization/compare/v1.1.0...v1.2.0) (2020-06-16)
+
+
+### Bug Fixes
+
+* update README.md on npmjs.com ([7c54084](https://github.com/emech-en/memoization/commit/7c54084de2857cf94505b28db85293fd5cb9d112))
+
+
+### Features
+
+* support non-premitiv keys ([#2](https://github.com/emech-en/memoization/issues/2)) ([86a37c0](https://github.com/emech-en/memoization/commit/86a37c0f3c7fae4a9b7d57002269d97de3a011df))
+
 ## [1.1.1](https://github.com/emech-en/memoization/compare/v1.1.0...v1.1.1) (2020-06-11)
 
 
