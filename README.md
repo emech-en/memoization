@@ -22,7 +22,7 @@ yarn add @emech/memoization
 
 ## Usage
 
-```
+```javascript
 const memoize = require("@emech/memoization").memoize;
 
 const random = (max) => Math.random() * max;
@@ -35,7 +35,7 @@ assert(randomNumber === randomNumber2);
 ```
 
 ## Api
-```
+```javascript
 memoize(realFunc [, resolver], timout) => memoizedFunc
 ```
 - **realFunc**: `function` The function for which the return values should be cached.
