@@ -10,7 +10,7 @@
 
 * support non-premitiv keys ([#2](https://github.com/emech-en/memoization/issues/2)) ([86a37c0](https://github.com/emech-en/memoization/commit/86a37c0f3c7fae4a9b7d57002269d97de3a011df))
 
-## [1.1.1](https://github.com/emech-en/memoization/compare/v1.1.0...v1.1.1) (2020-06-12)
+## [1.1.1](https://github.com/emech-en/memoization/compare/v1.1.0...v1.1.1) (2020-06-11)
 
 
 ### Bug Fixes
