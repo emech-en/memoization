@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/emech-en/memoization/compare/v1.2.1...v1.2.2) (2020-06-16)
+
+
+### Bug Fixes
+
+* update README.md (For updating npm page) ([ded7a6b](https://github.com/emech-en/memoization/commit/ded7a6b045b7caec12c1b578fa6256f44cfddde9))
+
 ## [1.2.1](https://github.com/emech-en/memoization/compare/v1.2.0...v1.2.1) (2020-06-16)
 
 
