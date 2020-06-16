@@ -34,6 +34,14 @@ const randomNumber2 = memoizedRandom(2);
 assert(randomNumber === randomNumber2);
 ```
 
+## Api
+```
+memoize(realFunc [, resolver], timout) => memoizedFunc
+```
+- **realFunc**: `function` The function for which the return values should be cached.
+- **resolver**: `function` *(Optional)* If provided gets called for each function call with the exact same set of parameters as the original function, the resolver function should provide the memoization key.
+- **timeout**: `number` Timeout for cached values in milliseconds
+
 
 ## Contribution
 
