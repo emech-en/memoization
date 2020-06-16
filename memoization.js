@@ -26,13 +26,17 @@
  * @param timeout   timeout for cached values in milliseconds
  */
 function memoize(func, resolver, timeout) {
-  // Considering memoize(func, timout) { }
+  /**
+   * Considering default resolver memoize(func, timout) { }
+   */
   if (typeof resolver === "number") {
     timeout = resolver;
     resolver = (...args) => args[0];
   }
 
-  // Check arguments types to be valid
+  /**
+   * Check arguments types to be valid
+   */
   if (
     typeof func !== "function" ||
     typeof resolver !== "function" ||
@@ -41,18 +45,39 @@ function memoize(func, resolver, timeout) {
     throw new Error("Argument Error: memoize(function, [function,] number)");
   }
 
-  const cache = {};
-  return (...args) => {
-    const key = resolver(...args);
+  /**
+   * Use map for better performance also support non-primitiv keys
+   */
+  const cache = new Map();
 
-    if (!cache[key] || Date.now() > cache[key].expiresAt) {
-      cache[key] = {
-        expiresAt: Date.now() + timeout,
-        value: func(...args),
-      };
+  /**
+   * Return memoized function
+   */
+  return (...args) => {
+    let key = resolver(...args);
+
+    /**
+     *  Serialize objects keys
+     */
+    if (typeof key === "object") {
+      key = JSON.stringify(key);
     }
 
-    return cache[key].value;
+    /**
+     * Check also expire time for more accuracy
+     */
+    if (!cache.has(key) || Date.now() > cache.get(key).expiresAt) {
+      cache.set(key, {
+        expiresAt: Date.now() + timeout,
+        value: func(...args),
+        /**
+         * remove cached value after timeout for memory consideration
+         */
+        timeout: setTimeout(() => cache.delete(key), timeout),
+      });
+    }
+
+    return cache.get(key).value;
   };
 }
 

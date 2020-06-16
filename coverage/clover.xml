@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1592227048337" clover="3.2.0">
-  <project timestamp="1592227048337" name="All files">
-    <metrics statements="12" coveredstatements="12" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3" elements="26" coveredelements="26" complexity="0" loc="12" ncloc="12" packages="1" files="1" classes="1"/>
+<coverage generated="1592302526931" clover="3.2.0">
+  <project timestamp="1592302526931" name="All files">
+    <metrics statements="15" coveredstatements="15" conditionals="13" coveredconditionals="13" methods="4" coveredmethods="4" elements="32" coveredelements="32" complexity="0" loc="15" ncloc="15" packages="1" files="1" classes="1"/>
     <file name="memoization.js" path="/Users/emech/Projects/memoization/memoization.js">
-      <metrics statements="12" coveredstatements="12" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
-      <line num="30" count="8" type="cond" truecount="2" falsecount="0"/>
-      <line num="31" count="2" type="stmt"/>
-      <line num="32" count="6" type="stmt"/>
-      <line num="36" count="8" type="cond" truecount="2" falsecount="0"/>
+      <metrics statements="15" coveredstatements="15" conditionals="13" coveredconditionals="13" methods="4" coveredmethods="4"/>
+      <line num="30" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="3" type="stmt"/>
+      <line num="32" count="11" type="stmt"/>
+      <line num="36" count="10" type="cond" truecount="2" falsecount="0"/>
       <line num="41" count="3" type="stmt"/>
-      <line num="44" count="5" type="stmt"/>
-      <line num="45" count="5" type="stmt"/>
-      <line num="46" count="17" type="stmt"/>
-      <line num="48" count="17" type="cond" truecount="4" falsecount="0"/>
-      <line num="49" count="11" type="stmt"/>
+      <line num="45" count="7" type="stmt"/>
+      <line num="46" count="7" type="stmt"/>
+      <line num="47" count="27" type="stmt"/>
+      <line num="50" count="27" type="cond" truecount="2" falsecount="0"/>
+      <line num="51" count="11" type="stmt"/>
+      <line num="54" count="27" type="cond" truecount="4" falsecount="0"/>
       <line num="55" count="17" type="stmt"/>
-      <line num="59" count="1" type="stmt"/>
+      <line num="58" count="9" type="stmt"/>
+      <line num="62" count="27" type="stmt"/>
+      <line num="66" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
