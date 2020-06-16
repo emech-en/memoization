@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/emech-en/memoization/compare/v1.2.0...v1.2.1) (2020-06-16)
+
+
+### Bug Fixes
+
+* update README.md ([5a4ae4f](https://github.com/emech-en/memoization/commit/5a4ae4f01273cbfe9b3d7d27ab057fa8f47ff118))
+
 # [1.2.0](https://github.com/emech-en/memoization/compare/v1.1.0...v1.2.0) (2020-06-16)
 
 
